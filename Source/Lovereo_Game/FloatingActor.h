@@ -16,7 +16,10 @@ public:
 	AFloatingActor();
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* VisualMesh;
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FloatingActor")
+	float FloatSpeed = 20.0F;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FloatingActor")
+	float RotationSpeed = 20.0F;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
